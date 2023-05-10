@@ -1,0 +1,408 @@
+#Omotac{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 630px;
+    height: 612px;
+}
+
+#UnosPodataka{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #ffffcc;
+    width: 44%;
+}
+
+#OmotacKancelarije{
+    display: flex;
+    flex-direction: column;
+}
+
+#OmotacPozicijeNaListi{
+    display: flex;
+    flex-direction: column;
+}
+
+p{
+    margin: 0;
+}
+
+h1{
+    margin: 0;
+}
+
+.PraznaPolja{
+    width: 230px;
+    height: 30px;
+    padding: 0;
+    margin-top:2px;
+}
+
+#Dodavanje{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #cccccc;
+    width: 130px;
+    height: 130px;
+    border: 2px black solid;
+}
+
+#SlikaDodaj{
+    width: 90px;
+    height: 90px;
+    margin-bottom: 3px;
+}
+
+.CrveniOkvir{
+    border: 2px red solid;
+}
+
+.Izaberi{
+    color: darkgray;
+}
+
+/*.........................................ovo gore su podesavanja za div-UnosPodataka................................................................*/
+#PrikazPodataka{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 54%;
+}
+
+#OmotacSata{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+#IkonicaSat{
+    height: 33px;
+    width: 33px;
+    margin-left: 5px;
+    margin-top: 5px;
+}
+
+#OmotacStolicaiBrojcanika{
+    display: flex;
+    width: 100%;
+    height: 12%;
+    margin-bottom: 23px;
+
+}
+#Stolice{
+    display: flex;
+    align-items: self-end;
+    width: 80%;
+    margin-left: 5px;
+}
+
+#Brojcanik{
+    display: flex;
+    align-items:flex-end;
+    justify-content: flex-end;
+    width: 20%
+}
+
+.Stolica{
+    background-size: 32px;
+    width: 106%;
+    height: 73px;
+}
+
+#BrojcanikParagraf{
+    font-size: 25px;
+    margin-right: 3px;
+}
+
+/*.........................................ovo gore su podesavanja za div-PrikazPodataka(Sat,stolice,brojcanik)................................................................*/
+
+#OmotacLjudi{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    height: 100%;
+}
+
+/*.........................................ovo gore su podesavanja za div-PrikazInformacije................................................................*/
+
+#OmotacInformacije{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 57px;
+    margin-top: 13px;
+}
+
+.crveniDiv{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: red;
+    height: 100%;
+    width: 20%;
+    border-radius: 25px;
+}
+
+.ZeleniDiv{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100%;
+    width: 20%;
+    border-radius: 25px;
+    background-color: green !important;
+}
+
+
+
+#divInformacja{
+    display: flex;
+    width: 20%;
+    margin: 10px;
+}
+
+#divParagraf{
+    display: flex;
+    width: 60%;
+}
+
+#DivZatvori{
+    display: flex;
+    justify-content: end;
+    width: 20%;
+    margin: 10px;
+}
+
+.NevidljiviDiv{
+    display: none !important;
+}
+/*----------------------------------------------------------------------------------------------------------------*/
+
+.DivoviUnesenihStranki{
+    display: flex;
+    align-items: center;
+    background-color: #cccccc;
+    width: 90%;
+    height: 50px;
+    border-radius: 7px;
+    margin-bottom: 44px;
+}
+
+.DivImePrezime{
+    display: flex;
+    flex-direction: column;
+    margin-left:5px;
+    width: 50%
+}
+
+.SpenImePrezime{
+    font-weight: bold;
+}
+
+.SpenPozicija{
+    font-size: 12px;
+    color: slategray;
+    font-weight: bold;
+}
+
+.OmotacDoleGoreBrsiSlika{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    width: 50%;
+    height: 100%;
+}
+
+.SlikaStreliceGore{
+    background-image: url("../Image/gore.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 60%;
+    width: 20%;
+    margin-right: 5px;
+}
+
+.SlikaStreliceGore:hover{
+    transform: scale(1.1);
+
+}
+
+.SlikaStreliceDole{
+    background-image: url("../Image/dole.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 60%;
+    width: 20%;
+    margin-right: 5px;
+}
+.SlikaStreliceDole:hover{
+    transform: scale(1.1);
+
+}
+
+.SlikaZaBrisanjeKlijenta{
+    background-image: url("../Image/brisi.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 90%;
+    width: 30%;
+    margin-right: 5px;
+}
+
+.SlikaZaBrisanjeKlijenta:hover{
+    transform: scale(1.1);
+
+}
+
+.SlikeInformacionogDiva{
+    background-image: url("../Image/Greska.svg");
+    background-size: 99%;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+}
+
+.SlikeInformacionogDivaOK{
+    background-image: url("../Image/OK.svg");
+    background-repeat: no-repeat;
+    background-size: 99%;
+    width: 30px;
+    height: 30px;
+}
+
+.crvenaSlovaNaParagrafu{
+    color: red;
+    font-size: 30px !important;
+    animation: animate 1s linear infinite;
+}
+@keyframes animate{
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 0.8;
+    }
+    50%{
+        opacity: 0;
+    }
+}
+
+
+.DivCikicaNaStolici{
+    background-image: url("../Image/stranka-stolica.svg"),url("../Image/prazna-stolica.svg");
+    background-repeat: no-repeat;
+    background-size: 32px;
+    width: 100%;
+    height: 73px;
+}
+
+
+.povecanjeSlikeDodaj{
+    width: 95px !important;
+    height: 95px !important;
+}
+.UvelicajDodajSliku:hover{
+    transform: scale(1.1);
+}
+
+.DivoviUnesenihStranki:first-child .SlikaStreliceGore {
+    display: none !important;
+}
+
+.DivoviUnesenihStranki:last-child .SlikaStreliceDole {
+    display: none !important;
+}
+
+#OmotacIskacucegProzora{
+    width: 100%;
+    background-color: #808080d4;
+    height: 100%;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#IskacuciProzor{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    background-color: white;
+    height: 15%;
+}
+
+#Traka{
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: space-between;
+    width: 100%;
+    height: 35%;
+    background-color: orange;
+}
+
+#Heder {
+    margin: 10px;
+    font-size: 8px;
+}
+
+#Heder h1{
+    margin: 0;
+
+}
+
+#X button{
+    background-color: orange;
+    border: orange;
+    width: 100%;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+#ButtonProzor{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+}
+#ButtonProzor button{
+    border: 1px black solid;
+    height: 50%;
+    width: 20%;
+}
+#DugmeDa{
+    margin-right:2px;
+}
+#DugmeNe{
+    margin-left: 4px;
+}
+.PraznaStolica{
+    background-image:url(../Image/prazna-stolica.svg);
+    background-repeat: no-repeat;
+    background-size: 32px;
+    width: 100%;
+    height: 73px;
+}
+
+.dugmeDa0{
+    margin-right:2px;
+}
+.dugmeDa1{
+    margin-right:2px;
+}
+.dugmeDa2{
+    margin-right:2px;
+}
+.dugmeDa3{
+    margin-right:2px;
+}
+.dugmeDa4{
+    margin-right:2px;
+}

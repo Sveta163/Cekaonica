@@ -1,0 +1,342 @@
+
+document.getElementById("Dodavanje").addEventListener("click",
+        () => {
+
+    let poljePrezime = document.getElementById("Prezime").value;
+    let poljeIme = document.getElementById("Ime").value;
+    let poljeKancelarija = document.getElementById("Kancelarija").value;
+    let poljepozicijaNaListi = document.getElementById("PozicijaNaListi").value;
+    poljePrezimeJePuno = true;
+    poljeImeJePuno = true;
+    poljeKancelarijaJePuno = true;
+    poljepozicijaNaListiJePuno = true;
+    if (poljePrezime === "") {
+        document.getElementById("Prezime").classList.add("CrveniOkvir");
+        poljePrezimeJePuno = false;
+    } else {
+        document.getElementById("Prezime").classList.remove("CrveniOkvir");
+    }
+    if (poljeIme === "") {
+        document.getElementById("Ime").classList.add("CrveniOkvir");
+        poljeImeJePuno = false;
+    } else {
+        document.getElementById("Ime").classList.remove("CrveniOkvir");
+    }
+    if (poljeKancelarija === "") {
+        document.getElementById("Kancelarija").classList.add("CrveniOkvir");
+        poljeKancelarijaJePuno = false;
+    } else {
+        document.getElementById("Kancelarija").classList.remove("CrveniOkvir");
+    }
+    if (poljepozicijaNaListi === "") {
+        document.getElementById("PozicijaNaListi").classList.add("CrveniOkvir");
+        poljepozicijaNaListiJePuno = false;
+    } else {
+        document.getElementById("PozicijaNaListi").classList.remove("CrveniOkvir");
+    }
+    if (poljePrezimeJePuno && poljeImeJePuno && poljeKancelarijaJePuno && poljepozicijaNaListiJePuno) {
+        dodavanjeNovihDivova();
+        resetovanejePoljaZaUnos();
+
+    }
+});
+
+function dodavanjeNovihDivova() {
+    let divOmotac = document.getElementById("OmotacLjudi");
+    let duzinaRoditelja = (divOmotac.children.length);
+    if (divOmotac.children.length < 5) {
+
+        if (document.getElementById("PozicijaNaListi").value === document.getElementById("Kraj").value) {
+
+            let divStanki = document.createElement("div");
+            divStanki.classList = "DivoviUnesenihStranki";
+            divStanki.id = ("divStranki" + duzinaRoditelja);
+            divOmotac.appendChild(divStanki);
+
+            let divImePrezime = document.createElement("div");
+            divImePrezime.classList = "DivImePrezime";
+            divStanki.appendChild(divImePrezime);
+
+            let spanPrezime = document.createElement("span");
+            spanPrezime.classList = "SpenImePrezime";
+            spanPrezime.innerText = document.getElementById("Prezime").value + " " + document.getElementById("Ime").value;
+            divImePrezime.appendChild(spanPrezime);
+
+            let spankancelarija = document.createElement("span");
+            spankancelarija.classList = "SpenPozicija";
+            spankancelarija.innerText = document.getElementById("Kancelarija").value;
+            divImePrezime.appendChild(spankancelarija);
+
+            let OmotadGoreDoleBrisiSlike = document.createElement("div");
+            OmotadGoreDoleBrisiSlike.classList = "OmotacDoleGoreBrsiSlika";
+            divStanki.insertBefore(OmotadGoreDoleBrisiSlike, divImePrezime.childElement);
+
+            let slikaGore = document.createElement("div");
+            slikaGore.classList = "SlikaStreliceGore";
+            slikaGore.id = ("slikaGore" + duzinaRoditelja);
+            OmotadGoreDoleBrisiSlike.appendChild(slikaGore);
+
+            let slikaDole = document.createElement("div");
+            slikaDole.classList = "SlikaStreliceDole";
+            slikaDole.id = ("slikaDole" + duzinaRoditelja);
+            OmotadGoreDoleBrisiSlike.appendChild(slikaDole);
+
+            let slikaBrisanje = document.createElement("div");
+            slikaBrisanje.classList = "SlikaZaBrisanjeKlijenta";
+            slikaBrisanje.id = ("slikaBrisanje" + duzinaRoditelja);
+            OmotadGoreDoleBrisiSlike.appendChild(slikaBrisanje);
+        }
+
+        if (document.getElementById("PozicijaNaListi").value === document.getElementById("Pocetak").value) {
+
+            let divStanki = document.createElement("div");
+            divStanki.classList = "DivoviUnesenihStranki";
+            divStanki.id = ("divStranki" + duzinaRoditelja);
+            divOmotac.insertBefore(divStanki, divOmotac.firstChild);
+
+            let divImePrezime = document.createElement("div");
+            divImePrezime.classList = "DivImePrezime";
+            divStanki.appendChild(divImePrezime);
+
+            let spanPrezime = document.createElement("span");
+            spanPrezime.classList = "SpenImePrezime";
+            spanPrezime.innerText = document.getElementById("Prezime").value + " " + document.getElementById("Ime").value;
+            divImePrezime.appendChild(spanPrezime);
+
+            let spankancelarija = document.createElement("span");
+            spankancelarija.classList = "SpenPozicija";
+            spankancelarija.innerText = document.getElementById("Kancelarija").value;
+            divImePrezime.appendChild(spankancelarija);
+
+            let OmotadGoreDoleBrisiSlike = document.createElement("div");
+            OmotadGoreDoleBrisiSlike.classList = "OmotacDoleGoreBrsiSlika";
+            divStanki.insertBefore(OmotadGoreDoleBrisiSlike, divImePrezime.childElement);
+
+            let slikaGore = document.createElement("div");
+            slikaGore.classList = "SlikaStreliceGore";
+            slikaGore.id = ("slikaGore" + duzinaRoditelja);
+            OmotadGoreDoleBrisiSlike.appendChild(slikaGore);
+
+            let slikaDole = document.createElement("div");
+            slikaDole.classList = "SlikaStreliceDole";
+            slikaDole.id = ("slikaDole" + duzinaRoditelja);
+            OmotadGoreDoleBrisiSlike.appendChild(slikaDole);
+
+            let slikaBrisanje = document.createElement("div");
+            slikaBrisanje.classList = "SlikaZaBrisanjeKlijenta";
+            slikaBrisanje.id = ("slikaBrisanje" + duzinaRoditelja);
+            OmotadGoreDoleBrisiSlike.appendChild(slikaBrisanje);
+        }
+
+        stavljanjeCikiceNaStolice();
+        brojacanik();
+    } else {
+        document.getElementById("InformacioniDiv").classList.remove("NevidljiviDiv");
+        document.getElementById("InformacioniDiv").classList = "crveniDiv";
+        document.getElementById("idSlikeInformacionogDIva").classList = "SlikeInformacionogDiva";
+        document.getElementById("ParagrafZaDivObavestenja").innerText = "Čekaonica je popunjena";
+        document.getElementById("BrojcanikParagraf").classList.add("crvenaSlovaNaParagrafu");
+    }
+}
+
+function brojacanik() {
+    for (let i = 0, max = document.getElementById("OmotacLjudi").children.length; i <= max; i++) {
+        document.getElementById("BrojcanikParagraf").innerText = i + "/" + "5";
+    }
+}
+
+function stavljanjeCikiceNaStolice() {
+
+    let ikonica1 = document.getElementById("IkonicaStolica1");
+    let ikonica2 = document.getElementById("IkonicaStolica2");
+    let ikonica3 = document.getElementById("IkonicaStolica3");
+    let ikonica4 = document.getElementById("IkonicaStolica4");
+    let ikonica5 = document.getElementById("IkonicaStolica5");
+
+    if (document.getElementById("OmotacLjudi").children.length === 1) {
+        ikonica1.classList = "DivCikicaNaStolici";
+    }
+
+    if (document.getElementById("OmotacLjudi").children.length === 2) {
+        ikonica2.classList = "DivCikicaNaStolici";
+    }
+
+    if (document.getElementById("OmotacLjudi").children.length === 3) {
+        ikonica3.classList = "DivCikicaNaStolici";
+    }
+    if (document.getElementById("OmotacLjudi").children.length === 4) {
+        ikonica4.classList = "DivCikicaNaStolici";
+    }
+    if (document.getElementById("OmotacLjudi").children.length === 5) {
+        ikonica5.classList = "DivCikicaNaStolici";
+    }
+
+}
+
+function resetovanejePoljaZaUnos() {
+    let poljePrezime = document.getElementById("Prezime");
+    let poljeIme = document.getElementById("Ime");
+    let poljeKancelarija = document.getElementById("Kancelarija");
+    let poljepozicijaNaListi = document.getElementById("PozicijaNaListi");
+    poljePrezime.value = "";
+    poljeIme.value = "";
+    poljeKancelarija.value = document.getElementById("Izaberi1").value;
+    poljepozicijaNaListi.value = document.getElementById("Izaberi2").value;
+}
+
+document.getElementById("OmotacIskacucegProzora").addEventListener("click",
+        (e) => {
+
+    if (e.target.id === "xDugme" || e.target.id === "OmotacIskacucegProzora" || e.target.id === "DugmeNe") {
+        document.getElementById("OmotacIskacucegProzora").classList = "NevidljiviDiv";
+    }
+
+    if (e.target.className === "dugmeDa0") {
+        document.getElementById("InformacioniDiv").classList.add("ZeleniDiv");
+        document.getElementById("InformacioniDiv").classList.remove("NevidljiviDiv");
+        document.getElementById("OmotacIskacucegProzora").classList = "NevidljiviDiv";
+        document.getElementById("idSlikeInformacionogDIva").classList = "SlikeInformacionogDivaOK";
+        document.getElementById("ParagrafZaDivObavestenja").innerText = "Uspesno brisanje";
+        document.getElementById("divStranki0").remove();
+        brisanjeCikicaSaStolice();
+    }
+    if (e.target.className === "dugmeDa1") {
+        document.getElementById("InformacioniDiv").classList.add("ZeleniDiv");
+        document.getElementById("InformacioniDiv").classList.remove("NevidljiviDiv");
+        document.getElementById("OmotacIskacucegProzora").classList = "NevidljiviDiv";
+        document.getElementById("idSlikeInformacionogDIva").classList = "SlikeInformacionogDivaOK";
+        document.getElementById("ParagrafZaDivObavestenja").innerText = "Uspesno brisanje";
+        document.getElementById("divStranki1").remove();
+        brisanjeCikicaSaStolice();
+    }
+    if (e.target.className === "dugmeDa2") {
+        document.getElementById("InformacioniDiv").classList.add("ZeleniDiv");
+        document.getElementById("InformacioniDiv").classList.remove("NevidljiviDiv");
+        document.getElementById("OmotacIskacucegProzora").classList = "NevidljiviDiv";
+        document.getElementById("idSlikeInformacionogDIva").classList = "SlikeInformacionogDivaOK";
+        document.getElementById("ParagrafZaDivObavestenja").innerText = "Uspesno brisanje";
+        document.getElementById("divStranki2").remove();
+        brisanjeCikicaSaStolice();
+    }
+    if (e.target.className === "dugmeDa3") {
+        document.getElementById("InformacioniDiv").classList.add("ZeleniDiv");
+        document.getElementById("InformacioniDiv").classList.remove("NevidljiviDiv");
+        document.getElementById("OmotacIskacucegProzora").classList = "NevidljiviDiv";
+        document.getElementById("idSlikeInformacionogDIva").classList = "SlikeInformacionogDivaOK";
+        document.getElementById("ParagrafZaDivObavestenja").innerText = "Uspesno brisanje";
+        document.getElementById("divStranki3").remove();
+        brisanjeCikicaSaStolice();
+    }
+    if (e.target.className === "dugmeDa4") {
+        document.getElementById("InformacioniDiv").classList.add("ZeleniDiv");
+        document.getElementById("InformacioniDiv").classList.remove("NevidljiviDiv");
+        document.getElementById("OmotacIskacucegProzora").classList = "NevidljiviDiv";
+        document.getElementById("idSlikeInformacionogDIva").classList = "SlikeInformacionogDivaOK";
+        document.getElementById("ParagrafZaDivObavestenja").innerText = "Uspesno brisanje";
+        document.getElementById("divStranki4").remove();
+        brisanjeCikicaSaStolice();
+    }
+});
+document.getElementById("PrikazPodataka").addEventListener("click",
+        (e) => {
+
+    if (e.target.id === "slikaBrisanje0") {
+        document.getElementById("OmotacIskacucegProzora").classList.remove("NevidljiviDiv");
+        document.getElementById("DugmeDa").classList = "dugmeDa0";
+    }
+    if (e.target.id === "slikaBrisanje1") {
+        document.getElementById("OmotacIskacucegProzora").classList.remove("NevidljiviDiv");
+        document.getElementById("DugmeDa").classList = "dugmeDa1";
+    }
+    if (e.target.id === "slikaBrisanje2") {
+        document.getElementById("OmotacIskacucegProzora").classList.remove("NevidljiviDiv");
+        document.getElementById("DugmeDa").classList = "dugmeDa2";
+    }
+    if (e.target.id === "slikaBrisanje3") {
+        document.getElementById("OmotacIskacucegProzora").classList.remove("NevidljiviDiv");
+        document.getElementById("DugmeDa").classList = "dugmeDa3";
+    }
+    if (e.target.id === "slikaBrisanje4") {
+        document.getElementById("OmotacIskacucegProzora").classList.remove("NevidljiviDiv");
+        document.getElementById("DugmeDa").classList = "dugmeDa4";
+    }
+});
+document.getElementById("InformacioniDiv").addEventListener("click",
+        (e) => {
+    if (e.target.id === "ZatvoriX") {
+        document.getElementById("InformacioniDiv").classList = "NevidljiviDiv";
+    }
+});
+function brisanjeCikicaSaStolice() {
+    let parentElement = document.getElementById("Stolice");
+    let childElement = parentElement.querySelectorAll(".DivCikicaNaStolici");
+
+    let numberOfChildren = parentElement.getElementsByClassName('DivCikicaNaStolici').length - 1;
+    parentElement.getElementsByClassName('DivCikicaNaStolici')[numberOfChildren].classList = 'PraznaStolica';
+
+    for (let i = 0, max = document.getElementById("OmotacLjudi").children.length; i <= max; i++) {
+        document.getElementById("BrojcanikParagraf").innerText = i + "/" + "5";
+    }
+
+    document.getElementById("BrojcanikParagraf").classList.remove("crvenaSlovaNaParagrafu");
+//    for (let i = childElement.length - 1; i >= 0; i--) {
+//        if (childElement[i].classList.contains('DivCikicaNaStolici')) {
+//            childElement[i].classList = "PraznaStolica";
+//            break;
+//        }
+//    }
+
+}
+
+document.getElementById("OmotacLjudi").addEventListener("click",
+        (e) => {
+
+    let roditelj = document.getElementById("OmotacLjudi");
+
+    let stranka0 = document.getElementById("divStranki0");
+    let stranka1 = document.getElementById("divStranki1");
+    let stranka2 = document.getElementById("divStranki2");
+    let stranka3 = document.getElementById("divStranki3");
+    let stranka4 = document.getElementById("divStranki4");
+
+    if (e.target.id === "slikaGore0") {
+        roditelj.insertBefore(stranka0, stranka0.previousSibling);
+    } else if (e.target.id === "slikaDole0") {
+        roditelj.insertBefore(stranka0.nextElementSibling, stranka0);
+    }
+
+    if (e.target.id === "slikaGore1") {
+        roditelj.insertBefore(stranka1, stranka1.previousSibling);
+    } else if (e.target.id === "slikaDole1") {
+        roditelj.insertBefore(stranka1.nextElementSibling, stranka1);
+    }
+
+    if (e.target.id === "slikaGore2") {
+        roditelj.insertBefore(stranka2, stranka2.previousSibling);
+    } else if (e.target.id === "slikaDole2") {
+        roditelj.insertBefore(stranka2.nextElementSibling, stranka2);
+    }
+
+    if (e.target.id === "slikaGore3") {
+        roditelj.insertBefore(stranka3, stranka3.previousSibling);
+    } else if (e.target.id === "slikaDole3") {
+        roditelj.insertBefore(stranka3.nextElementSibling, stranka3);
+    }
+
+    if (e.target.id === "slikaGore4") {
+        roditelj.insertBefore(stranka4, stranka4.previousSibling);
+    } else if (e.target.id === "slikaDole4") {
+        roditelj.insertBefore(stranka4.nextElementSibling, stranka4);
+    }
+
+
+
+});
+
+
+
+
+
+
+
+

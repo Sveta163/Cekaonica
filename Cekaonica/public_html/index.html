@@ -1,0 +1,156 @@
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="Styles/Style.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <div id="OmotacIskacucegProzora" class="NevidljiviDiv">
+            <div id="IskacuciProzor">
+                <div id="Traka">
+                    <div id="Heder">
+                        <h1>Da li ste sigurni?</h1>
+                    </div>
+                    <div id="X"> 
+                        <button id="xDugme" >X</button>
+                    </div>
+                </div>
+                <div id="ButtonProzor">
+                    <button id="DugmeDa">Da</button>
+                    <button id="DugmeNe">Ne</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="Omotac">
+            <div id="UnosPodataka">
+                <h1>Nova stranka</h1>
+                <div>
+                    <p>Prezime:</p>
+                    <input id="Prezime" class="PraznaPolja" type="text">
+                </div>
+                <div>
+                    <p>Ime:</p>
+                    <input id="Ime" class="PraznaPolja" type="text">
+                </div>
+                <div id="OmotacKancelarije">
+                    <label for="Kancelarija">Kancelarija:</label>
+                    <select id="Kancelarija" class="PraznaPolja"  name="Kancelarija">              
+                        <option id="Izaberi1" class="Izaberi" value="" selected disabled>Izaberite</option>
+                        <option id="Mtičar" value="Matičar">Matičar</option>
+                        <option id="ZemljišneKnjige" value="Zemljišne knjige">Zemljišne knjige</option>
+                        <option id="Poreskaprava" value="Poreskaprava">Poreska prava</option>
+                    </select>
+                </div>
+                <div id="OmotacPozicijeNaListi">
+                    <label for="PozicijaNaListi">Pozicija na listi:</label>
+                    <select class="PraznaPolja" id="PozicijaNaListi" name="PozicijaNaListi">
+                        <option id="Izaberi2" class="Izaberi" value="" selected disabled>Izaberite</option>
+                        <option id="Pocetak" value="Početak">Početak</option>
+                        <option id="Kraj" value="Kraj">Kraj</option>                    
+                    </select>
+                </div>
+                <div id="Dodavanje">
+                    <img id="SlikaDodaj" class="UvelicajDodajSliku" src="Image/dodaj.svg" alt="alt"/>
+                    <p>Dodaj</p>
+                </div>
+            </div>
+
+            <div id="PrikazPodataka">
+                <div id="OmotacSata">
+                    <img id="IkonicaSat" src="Image/sat.svg" alt="alt"/>
+                </div>
+                <div id="OmotacStolicaiBrojcanika">
+                    <div id="Stolice">
+                        <div id="IkonicaStolica1" class="PraznaStolica"></div>
+                        <div id="IkonicaStolica2" class="PraznaStolica"></div>
+                        <div id="IkonicaStolica3" class="PraznaStolica"></div>
+                        <div id="IkonicaStolica4" class="PraznaStolica"></div>
+                        <div id="IkonicaStolica5" class="PraznaStolica"></div>
+                    </div>
+                    <div id="Brojcanik">
+                        <p id="BrojcanikParagraf">0/5</p>
+                    </div>
+                </div>
+                <div id="OmotacLjudi">
+
+                </div>
+
+            </div>
+        </div>
+        <div id="OmotacInformacije">
+            <div id="InformacioniDiv" class="NevidljiviDiv">
+                <div id="divInformacja" >
+                    <div id="idSlikeInformacionogDIva" class="SlikeInformacionogDiva"></div>
+                </div>
+                <div id="divParagraf">
+                    <p id="ParagrafZaDivObavestenja">Sveta car</p>
+                </div>
+                <div id="DivZatvori">
+                    <img id="ZatvoriX" src="Image/Zatvori.svg" alt="alt"/>
+                </div>
+            </div>
+        </div>        
+
+        <script src="Scripts/Script.js" type="text/javascript"></script>
+    </body>
+</html>
+
+<!--<div id="OmotacLjudi">
+    <div id="PviDiv" class="DivoviUnesenihStranki">
+        <div class="DivImePrezime">
+            <span class="SpenImePrezime">Gavrancic Svetozar</span>
+            <span class="SpenPozicija">Marketing</span>
+        </div>
+        <div class="OmotacDoleGoreBrsiSlika">
+            <img class="SlikaStrecileGore" src="Image/gore.svg" alt="alt"/>
+            <img class="SlikaStrecileDole"  src="Image/dole.svg" alt="alt"/>
+            <img class="SlikaZaBrisanjeKlijenta" src="Image/brisi.svg" alt="alt"/>
+        </div>
+    </div>
+    <div id="DrugDiv" class="DivoviUnesenihStranki">
+        <div class="DivImePrezime">
+            <span class="SpenImePrezime">Gavrancic Svetozar</span>
+            <span class="SpenPozicija">Marketing</span>
+        </div>
+        <div class="OmotacDoleGoreBrsiSlika">
+            <img class="SlikaStrecileGore" src="Image/gore.svg" alt="alt"/>
+            <img class="SlikaStrecileDole"  src="Image/dole.svg" alt="alt"/>
+            <img class="SlikaZaBrisanjeKlijenta" src="Image/brisi.svg" alt="alt"/>
+        </div>
+    </div>
+    <div id="TerciDiv" class="DivoviUnesenihStranki">
+        <div class="DivImePrezime">
+            <span class="SpenImePrezime">Gavrancic Svetozar</span>
+            <span class="SpenPozicija">Marketing</span>
+        </div>
+        <div class="OmotacDoleGoreBrsiSlika">
+            <img class="SlikaStrecileGore" src="Image/gore.svg" alt="alt"/>
+            <img class="SlikaStrecileDole"  src="Image/dole.svg" alt="alt"/>
+            <img class="SlikaZaBrisanjeKlijenta" src="Image/brisi.svg" alt="alt"/>
+        </div>
+    </div>
+    <div id="CetvrtiDiv" class="DivoviUnesenihStranki">
+        <div class="DivImePrezime">
+            <span class="SpenImePrezime">Gavrancic Svetozar</span>
+            <span class="SpenPozicija">Marketing</span>
+        </div>
+        <div class="OmotacDoleGoreBrsiSlika">
+            <img class="SlikaStrecileGore" src="Image/gore.svg" alt="alt"/>
+            <img class="SlikaStrecileDole"  src="Image/dole.svg" alt="alt"/>
+            <img class="SlikaZaBrisanjeKlijenta" src="Image/brisi.svg" alt="alt"/>
+        </div>
+    </div>
+    <div id="PetiDiv" class="DivoviUnesenihStranki">
+        <div class="DivImePrezime">
+            <span class="SpenImePrezime">Gavrancic Svetozar</span>
+            <span class="SpenPozicija">Marketing</span>
+        </div>
+        <div class="OmotacDoleGoreBrsiSlika">
+            <img class="SlikaStrecileGore" src="Image/gore.svg" alt="alt"/>
+            <img class="SlikaStrecileDole"  src="Image/dole.svg" alt="alt"/>
+            <img class="SlikaZaBrisanjeKlijenta" src="Image/brisi.svg" alt="alt"/>
+        </div>
+    </div>
+</div>  -->
